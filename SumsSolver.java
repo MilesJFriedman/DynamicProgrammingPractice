@@ -15,6 +15,8 @@ public class SumsSolver {
 		
 		int testCases = input.nextInt();
 		
+		for (int i = 0; i < testCases; i++) {
+			
 			int N = input.nextInt();
 			int M = input.nextInt();
 
@@ -23,15 +25,23 @@ public class SumsSolver {
 			int[] permutations = new int[N+1];
 			
 			//Create base cases that will be used to assist the recursive function below.
-			permutations[0] = 0;
-			permutations[1] = 0;
-			permutations[2] = 1%M;
-			permutations[3] = 1%M;
-			permutations[4] = 1%M;
-			permutations[5] = 3%M;
+			if (N > 0)
+				permutations[0] = 0;
+			if (N > 1)
+				permutations[1] = 0;
+			if (N > 1) 
+				permutations[2] = 1%M;
+			if (N > 3)
+				permutations[3] = 1%M;
+			if (N > 4)
+				permutations[4] = 1%M;
+			if (N > 5)
+				permutations[5] = 3%M;
 			
 			int answer = sumsRec(N, permutations, M);
 			System.out.println(answer);
+			
+		}
 	}
 	
 	//recursively solves the problem by breaking up the number into smaller versions until it can
