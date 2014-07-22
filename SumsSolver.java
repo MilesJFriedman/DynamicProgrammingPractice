@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Sums.java
  * 
- * @author Miles
+ * @author Miles Friedman m3488030 COP3503C R6-Sums
  * @version 7/16/14
  */
 public class SumsSolver {
